@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and remove elements in DOM </title>
+</head>
+<body style="background-color: rebeccapurple;">
+    <ul class="language">
+        <li>javascript</li>
+
+    </ul>
+</body>
+   <script>
+      function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`
+        document.querySelector(`.language`).appendChild(li)
+      }
+
+      addLanguage('python')
+      addLanguage('java')
+
+      // same function with optimize way
+
+      function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+      }
+     addOptiLanguage('golang')
+     addOptiLanguage('c++')
+
+
+     //edit
+    
+     // 1 Approach
+     const secLang = document.querySelector('li:nth-child(2)')
+     //secLang.innerHTML='mojo'
+
+     // 2 Approach
+
+     const newLi = document.createElement('li')
+     newLi.textContent='swift'
+     secLang.replaceWith(newLi)
+
+     // edit
+
+     const firstLang = document.querySelector('li:first-child')
+     firstLang.outerHTML='<li>TypeScript</li>'
+
+
+     // remove  
+
+     const lastLang = document.querySelector('li:last-child')
+     lastLang.remove()
+
+
+
+
+   </script>
+</html>
