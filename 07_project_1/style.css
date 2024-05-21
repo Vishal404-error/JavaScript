@@ -1,0 +1,39 @@
+html {
+    margin: 0;
+}
+
+span {
+     display: block;
+}
+
+.Canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+
+.button {
+
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+    border-radius: 20px;
+
+}
+
+#greenyellow {
+    background: greenyellow;
+}
+
+#pink {
+    background: rgb(201, 43, 93);
+}
+
+#violet{
+    background: violet;
+}
+
+#yellow {
+    background: rgb(115, 115, 4);
+}
